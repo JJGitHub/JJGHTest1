@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "RestService",
 		"typeProperties": {
-			"url": "https://stenadrillingservices.synergilife.dnvgl.com",
+			"url": "https://stenadrillingservices.synergilife.dnvgl.com/api/case/239",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		},
