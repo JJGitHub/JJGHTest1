@@ -1,0 +1,19 @@
+{
+	"name": "SynergiRESTJson",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "digimaxws2-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "json/synergijsonin",
+				"fileSystem": "fs1"
+			}
+		},
+		"schema": {}
+	}
+}
