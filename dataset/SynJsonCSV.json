@@ -1,0 +1,48 @@
+{
+	"name": "SynJsonCSV",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "digimaxws2-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "csv/csvout",
+				"fileSystem": "fs1"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "CaseID",
+				"type": "String"
+			},
+			{
+				"name": "CaseDate",
+				"type": "String"
+			},
+			{
+				"name": "Title",
+				"type": "String"
+			},
+			{
+				"name": "Description",
+				"type": "String"
+			},
+			{
+				"name": "UnitReported",
+				"type": "String"
+			},
+			{
+				"name": "PersonInCharge",
+				"type": "String"
+			}
+		]
+	}
+}

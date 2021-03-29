@@ -1,0 +1,2129 @@
+{
+	"name": "SynergiJsonOut",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "digimaxws2-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "json/synergijsonin",
+				"fileSystem": "fs1"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"messages": {
+					"type": "object"
+				},
+				"data": {
+					"type": "object",
+					"properties": {
+						"primaryKey": {
+							"type": "object",
+							"properties": {
+								"v": {
+									"type": "integer"
+								}
+							}
+						},
+						"caseType": {
+							"type": "object",
+							"properties": {
+								"v": {
+									"type": "integer"
+								}
+							}
+						},
+						"metaData": {
+							"type": "object",
+							"properties": {
+								"readOnlyDomains": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"domainId": {
+												"type": "integer"
+											}
+										}
+									}
+								},
+								"readOnlyDataTags": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"dataTag": {
+												"type": "string"
+											}
+										}
+									}
+								}
+							}
+						},
+						"fields": {
+							"type": "object",
+							"properties": {
+								"CaseType": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													},
+													"d": {
+														"type": "string"
+													},
+													"ld": {
+														"type": "string"
+													},
+													"i": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"CaseDate": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"Title": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"Description": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"CaseCategory": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													},
+													"d": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"UnitReported": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													},
+													"d": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"WorkProcess": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													}
+												}
+											}
+										}
+									}
+								},
+								"SystemInvolved": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"EquipmentDescription": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"ChemicalsInvolved": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													}
+												}
+											}
+										}
+									}
+								},
+								"Deadline": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"ClassificationComments": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"ActualHazard": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													}
+												}
+											}
+										}
+									}
+								},
+								"RecurrenceFrequency": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													},
+													"d": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"PotentialHazard": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													},
+													"d": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"CauseDescription": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"CaseNo": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													}
+												}
+											}
+										}
+									}
+								},
+								"Status": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													},
+													"d": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"UnitInCharge": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													},
+													"d": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"PersonInCharge": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													},
+													"d": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"RiskArea": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													},
+													"d": {
+														"type": "string"
+													},
+													"i": {
+														"type": "string"
+													},
+													"b": {
+														"type": "integer"
+													},
+													"f": {
+														"type": "integer"
+													}
+												}
+											}
+										}
+									}
+								},
+								"Weight": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													}
+												}
+											}
+										}
+									}
+								},
+								"Created": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"Modified": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"ImportDatabaseId": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"ImportTransId": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"RiskAreaInitial": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													},
+													"i": {
+														"type": "string"
+													},
+													"b": {
+														"type": "integer"
+													},
+													"f": {
+														"type": "integer"
+													}
+												}
+											}
+										}
+									}
+								},
+								"CaseProcessingTime": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													}
+												}
+											}
+										}
+									}
+								},
+								"ExtraText1": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"ExtraText4": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"FlgIsPublicAccess": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													}
+												}
+											}
+										}
+									}
+								},
+								"ExtraCode1": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													}
+												}
+											}
+										}
+									}
+								},
+								"ExtraCode6": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													}
+												}
+											}
+										}
+									}
+								},
+								"ExtraCode7": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													}
+												}
+											}
+										}
+									}
+								},
+								"StatusTemp": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													},
+													"d": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"TmpMailCaseComment": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"TmpMailReceiversTo": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"TmpMailReceiversCc": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"FlgRegenerateIndex": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													}
+												}
+											}
+										}
+									}
+								},
+								"RegistrationDelay": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													}
+												}
+											}
+										}
+									}
+								},
+								"CaseDueStatus": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													},
+													"d": {
+														"type": "string"
+													},
+													"i": {
+														"type": "string"
+													},
+													"b": {
+														"type": "integer"
+													},
+													"f": {
+														"type": "integer"
+													}
+												}
+											}
+										}
+									}
+								},
+								"CaseClosedDate": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"Originator": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													}
+												}
+											}
+										}
+									}
+								},
+								"CaseRefValue31": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRef63": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRef4": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRef5": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRef3": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRef112": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRefValue115": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRef116": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRefValue119": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRefValue122": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRefValue124": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRef200": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRefValue26": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRefValue79": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRefValue80": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRefValue6": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRefValue2": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRefValue1": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRefValue2682": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRef15": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"CaseRef3895": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"SearchLocationHierarchy": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													},
+													"d": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"ReferenceValue6200": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"ReferenceValue6201": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								},
+								"ReferenceValue6202": {
+									"type": "object",
+									"properties": {
+										"values": {
+											"type": "array"
+										}
+									}
+								}
+							}
+						},
+						"subTables": {
+							"type": "object",
+							"properties": {
+								"TblTransLog": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"primaryKey": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													}
+												}
+											},
+											"fields": {
+												"type": "object",
+												"properties": {
+													"LogLogAction": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		},
+																		"d": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"LogCarriedOutBy": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		},
+																		"d": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"LogDateCarriedOut": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"LogForwardedToPerson": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		},
+																		"d": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"LogNo": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"LogForwardUnit": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		},
+																		"d": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"LogMailNo": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"LogObjectBlob": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array"
+															}
+														}
+													},
+													"LogDateCarriedOutLocalTime": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"LogClientUTCOffset": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array"
+															}
+														}
+													},
+													"CaseMailLogMailNo": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"CaseMailNo": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"CaseMailSubject": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"CaseMailComment": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"CaseMailSender": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"CaseMailReceiversCc": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array"
+															}
+														}
+													},
+													"CaseMailSenderEmail": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"CaseMailReceiversTo": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array"
+															}
+														}
+													},
+													"CaseMailDateOfDispatch": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"CaseMailReceiversBcc": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array"
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								},
+								"TblAction": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"primaryKey": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													}
+												}
+											},
+											"fields": {
+												"type": "object",
+												"properties": {
+													"ActionDeadline": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"ActionUnitResponsible": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		},
+																		"d": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"ActionCompletedDate": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"ActionDescription": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"ActionComments": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"ActionType": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		},
+																		"d": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"ActionStatus": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		},
+																		"d": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"ActionPersonInCharge": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		},
+																		"d": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"ActionNo": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"ActionCreatedDate": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"ActionNoOriginal": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array"
+															}
+														}
+													},
+													"ActionDueStatus": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		},
+																		"d": {
+																			"type": "string"
+																		},
+																		"i": {
+																			"type": "string"
+																		},
+																		"b": {
+																			"type": "integer"
+																		},
+																		"f": {
+																			"type": "integer"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"ActionTileStatusIndicator": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		},
+																		"d": {
+																			"type": "string"
+																		},
+																		"i": {
+																			"type": "string"
+																		},
+																		"b": {
+																			"type": "integer"
+																		},
+																		"f": {
+																			"type": "integer"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"ActionRefValue5001": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array"
+															}
+														}
+													},
+													"ActionRefValueDate5002": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array"
+															}
+														}
+													},
+													"ActionRefValue5003": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array"
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								},
+								"TblSynergiCause": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"primaryKey": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													},
+													"d": {
+														"type": "string"
+													},
+													"ctg": {
+														"type": "integer"
+													}
+												}
+											},
+											"fields": {
+												"type": "object",
+												"properties": {
+													"CauseCategory": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		},
+																		"d": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"Cause": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		},
+																		"d": {
+																			"type": "string"
+																		},
+																		"ctg": {
+																			"type": "integer"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"CauseComments": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array"
+															}
+														}
+													},
+													"CauseFlgMainCause": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								},
+								"TblLossPotEvaluation": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"primaryKey": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													}
+												}
+											},
+											"fields": {
+												"type": "object",
+												"properties": {
+													"PotRiskEvPotConsequenceDescr": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array"
+															}
+														}
+													},
+													"PotRiskEvRevisionDate": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"PotRiskEvCreatedBy": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"PotRiskEvRecurrence": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		},
+																		"d": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"PotRiskEvLossPotentialRevNo": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"PotRiskEvPotentialHazard": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		},
+																		"d": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"PotRiskEvRecurrenceRpt": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		},
+																		"d": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"PotRiskEvValidFrom": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"PotRiskEvValidTo": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array"
+															}
+														}
+													}
+												}
+											},
+											"subTables": {
+												"type": "object",
+												"properties": {
+													"TblLossPotEvaluationConseq": {
+														"type": "array",
+														"items": {
+															"type": "object",
+															"properties": {
+																"primaryKey": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		},
+																		"d": {
+																			"type": "string"
+																		},
+																		"i": {
+																			"type": "string"
+																		}
+																	}
+																},
+																"fields": {
+																	"type": "object",
+																	"properties": {
+																		"PotRiskConsequenceType": {
+																			"type": "object",
+																			"properties": {
+																				"values": {
+																					"type": "array",
+																					"items": {
+																						"type": "object",
+																						"properties": {
+																							"v": {
+																								"type": "integer"
+																							},
+																							"d": {
+																								"type": "string"
+																							},
+																							"i": {
+																								"type": "string"
+																							}
+																						}
+																					}
+																				}
+																			}
+																		},
+																		"PotRiskConsequenceSeverity": {
+																			"type": "object",
+																			"properties": {
+																				"values": {
+																					"type": "array",
+																					"items": {
+																						"type": "object",
+																						"properties": {
+																							"v": {
+																								"type": "integer"
+																							},
+																							"d": {
+																								"type": "string"
+																							},
+																							"ctg": {
+																								"type": "integer"
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								},
+								"TblTransMail": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"primaryKey": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													}
+												}
+											},
+											"fields": {
+												"type": "object",
+												"properties": {
+													"MailNo": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"MailOperation": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		},
+																		"d": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"MailComment": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array"
+															}
+														}
+													},
+													"MailSender": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"MailDateOfDispatch": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"MailReceiversTo": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"MailReceiversCc": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array"
+															}
+														}
+													},
+													"MailReceiversBcc": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array"
+															}
+														}
+													},
+													"MailSubject": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"MailObjectBlob": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array"
+															}
+														}
+													},
+													"MailSenderEmail": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"MailLogMailNo": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								},
+								"TblTransStatusPrev": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"primaryKey": {
+												"type": "object",
+												"properties": {
+													"v": {
+														"type": "integer"
+													}
+												}
+											},
+											"fields": {
+												"type": "object",
+												"properties": {
+													"StatusPrevNo": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		}
+																	}
+																}
+															}
+														}
+													},
+													"StatusPrev": {
+														"type": "object",
+														"properties": {
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "object",
+																	"properties": {
+																		"v": {
+																			"type": "integer"
+																		},
+																		"d": {
+																			"type": "string"
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

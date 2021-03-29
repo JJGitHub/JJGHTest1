@@ -28,7 +28,7 @@
 				}
 			},
 			{
-				"name": "GetData",
+				"name": "CopyRESTData1",
 				"type": "Copy",
 				"dependsOn": [
 					{
@@ -53,10 +53,7 @@
 						"requestInterval": "00.00:00:00.010",
 						"requestMethod": "GET",
 						"additionalHeaders": {
-							"Authorization": {
-								"value": "Value = @concat('Bearer ',activity('GetBearerToken').output.access_token)",
-								"type": "Expression"
-							}
+							"Authorization": "@concat('Bearer ',activity('GetBearerToken').output.access_token)"
 						}
 					},
 					"sink": {
@@ -72,13 +69,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "RestResource2",
+						"referenceName": "SynergiREST",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "SynergiRESTJson",
+						"referenceName": "SynergiJsonOut",
 						"type": "DatasetReference"
 					}
 				]

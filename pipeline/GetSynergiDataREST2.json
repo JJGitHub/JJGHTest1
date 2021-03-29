@@ -1,0 +1,204 @@
+{
+	"name": "GetSynergiDataREST2",
+	"properties": {
+		"activities": [
+			{
+				"name": "GetBearerToken",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://stenadrilling1id.synergilife.dnvgl.com/connect/token",
+					"connectVia": {
+						"referenceName": "AutoResolveIntegrationRuntime",
+						"type": "IntegrationRuntimeReference"
+					},
+					"method": "POST",
+					"headers": {
+						"Content-Type": "application/x-www-form-urlencoded"
+					},
+					"body": "grant_type=password&username=sdl.darwin@stena.com&password=cFMWs9tLPa9RZ6JJ8astXc&client_id=sl16-azure-stena-prd-resource-client&client_secret=4q2ZSE4AwJ2P8zrqbWTsTs&scope=sl16-azure-stena-prd-scope"
+				}
+			},
+			{
+				"name": "CopyRESTData2",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "GetBearerToken",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "00:01:40",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"additionalHeaders": {
+							"Authorization": "@concat('Bearer ',activity('GetBearerToken').output.access_token)"
+						}
+					},
+					"sink": {
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "SynergiREST",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SynergiJsonOut",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "CopyDayaToCSV",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "CopyRESTData2",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "JsonReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".csv"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['data']['primaryKey']['v']"
+								},
+								"sink": {
+									"name": "CaseID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['data']['fields']['CaseDate']['values'][0]['v']"
+								},
+								"sink": {
+									"name": "CaseDate",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['data']['fields']['Title']['values'][0]['v']"
+								},
+								"sink": {
+									"name": "Title",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['data']['fields']['Description']['values'][0]['v']"
+								},
+								"sink": {
+									"name": "Description",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['data']['fields']['PersonInCharge']"
+								},
+								"sink": {
+									"name": "PersonInCharge",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['data']['fields']['UnitReported']['values'][0]['d']"
+								},
+								"sink": {
+									"name": "UnitReported",
+									"type": "String"
+								}
+							}
+						],
+						"collectionReference": "",
+						"mapComplexValuesToString": true
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SynJson",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SynJsonCSV",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

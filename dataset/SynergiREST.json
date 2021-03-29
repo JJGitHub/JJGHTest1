@@ -1,0 +1,15 @@
+{
+	"name": "SynergiREST",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SynergiService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "/api/case/239"
+		},
+		"schema": []
+	}
+}
